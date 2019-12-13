@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="orders">
+            <h2><span jhiTranslate="shopGiaLinhApp.orders.detail.title">Orders</span> {{orders.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.totalPrice">Total Price</span></dt>
+                <dd>
+                    <span>{{orders.totalPrice}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.note">Note</span></dt>
+                <dd>
+                    <span>{{orders.note}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{orders.createdAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.updatedAt">Updated At</span></dt>
+                <dd>
+                    <span>{{orders.updatedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.deletedAt">Deleted At</span></dt>
+                <dd>
+                    <span>{{orders.deletedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.status">Status</span></dt>
+                <dd>
+                    <span>{{orders.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.orders.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="orders.customerId">
+                        <a [routerLink]="['/customer', orders.customerId, 'view']">{{orders.customerId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/orders', orders.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

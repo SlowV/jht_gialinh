@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="accounts">
+            <h2><span jhiTranslate="shopGiaLinhApp.accounts.detail.title">Accounts</span> {{accounts.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.email">Email</span></dt>
+                <dd>
+                    <span>{{accounts.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.password">Password</span></dt>
+                <dd>
+                    <span>{{accounts.password}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.fullName">Full Name</span></dt>
+                <dd>
+                    <span>{{accounts.fullName}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.phone">Phone</span></dt>
+                <dd>
+                    <span>{{accounts.phone}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.avatar">Avatar</span></dt>
+                <dd>
+                    <span>{{accounts.avatar}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.gender">Gender</span></dt>
+                <dd>
+                    <span>{{accounts.gender}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.address">Address</span></dt>
+                <dd>
+                    <span>{{accounts.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.introduction">Introduction</span></dt>
+                <dd>
+                    <span>{{accounts.introduction}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{accounts.createdAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.updatedAt">Updated At</span></dt>
+                <dd>
+                    <span>{{accounts.updatedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.deletedAt">Deleted At</span></dt>
+                <dd>
+                    <span>{{accounts.deletedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.accounts.status">Status</span></dt>
+                <dd>
+                    <span>{{accounts.status}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/accounts', accounts.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "shopGiaLinhApp": {
+    "collection": {
+      "home": {
+        "title": "Collections",
+        "createLabel": "Thêm mới một Collection",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Collection",
+        "notFound": "No Collections found"
+      },
+      "created": "Một Collection mới được tạo với định danh {{ param }}",
+      "updated": "Một Collection cập nhật với định danh {{ param }}",
+      "deleted": "Một Collection đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Collection {{ id }}?"
+      },
+      "detail": {
+        "title": "Collection"
+      },
+      "name": "Name",
+      "description": "Description",
+      "images": "Images",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "deletedAt": "Deleted At",
+      "status": "Status",
+      "product": "Product"
+    }
+  }
+}

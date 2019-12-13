@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="product">
+            <h2><span jhiTranslate="shopGiaLinhApp.product.detail.title">Product</span> {{product.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shopGiaLinhApp.product.name">Name</span></dt>
+                <dd>
+                    <span>{{product.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.price">Price</span></dt>
+                <dd>
+                    <span>{{product.price}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.description">Description</span></dt>
+                <dd>
+                    <span>{{product.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.images">Images</span></dt>
+                <dd>
+                    <span>{{product.images}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.isSale">Is Sale</span></dt>
+                <dd>
+                    <span>{{product.isSale}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.percent">Percent</span></dt>
+                <dd>
+                    <span>{{product.percent}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.detail">Detail</span></dt>
+                <dd>
+                    <span>{{product.detail}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{product.createdAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.updatedAt">Updated At</span></dt>
+                <dd>
+                    <span>{{product.updatedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.deletedAt">Deleted At</span></dt>
+                <dd>
+                    <span>{{product.deletedAt}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.status">Status</span></dt>
+                <dd>
+                    <span>{{product.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.category">Category</span></dt>
+                <dd>
+                    <div *ngIf="product.categoryId">
+                        <a [routerLink]="['/category', product.categoryId, 'view']">{{product.categoryId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="shopGiaLinhApp.product.collection">Collection</span></dt>
+                <dd>
+                    <div *ngIf="product.collectionId">
+                        <a [routerLink]="['/collection', product.collectionId, 'view']">{{product.collectionId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product', product.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

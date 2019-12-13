@@ -1,0 +1,25 @@
+{
+  "shopGiaLinhApp": {
+    "ordersProduct": {
+      "home": {
+        "title": "Orders Products",
+        "createLabel": "Thêm mới một Orders Product",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Orders Product",
+        "notFound": "No Orders Products found"
+      },
+      "created": "Một Orders Product mới được tạo với định danh {{ param }}",
+      "updated": "Một Orders Product cập nhật với định danh {{ param }}",
+      "deleted": "Một Orders Product đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Orders Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Orders Product"
+      },
+      "quantity": "Quantity",
+      "unitPrice": "Unit Price",
+      "orders": "Orders",
+      "product": "Product"
+    }
+  }
+}
