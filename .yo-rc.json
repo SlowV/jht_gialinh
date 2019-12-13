@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gialinh.shop",
+      "nativeLanguage": "vi"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "ShopGiaLinh",
+    "packageName": "com.gialinh.shop",
+    "packageFolder": "com/gialinh/shop",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjZlNWUwMzgyNDRlOTk5ZGQzZjAzZWIxYzRjNTQ1NjFhODc2ZDFkOWUwNmFlYWEyM2Q5YzMwMzU2ZjA1MTBmNDM3MjE0MjZmYWQxY2UwZjExOTkwZDk2ZDQ1ZDc1Mjk0Yzk1NjM2MzBlMTk5MWUwMTA1ODc5Mzg0ZGJjMWQyMjc=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "vi",
+    "languages": ["vi"],
+    "blueprints": []
+  }
+}
