@@ -194,6 +194,16 @@ public class Category implements Serializable {
         return 31;
     }
 
+    public Category(@NotNull String name, String description, @NotNull String images) {
+        this.name = name;
+        this.description = description;
+        this.images = images;
+        this.status = 1;
+    }
+
+    public Category() {
+    }
+
     @Override
     public String toString() {
         return "Category{" +

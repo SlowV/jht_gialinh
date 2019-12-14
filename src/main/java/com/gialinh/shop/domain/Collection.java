@@ -53,6 +53,16 @@ public class Collection implements Serializable {
     @OneToMany(mappedBy = "collection")
     private Set<Product> products = new HashSet<>();
 
+    public Collection(@NotNull String name, String description, @NotNull String images) {
+        this.name = name;
+        this.description = description;
+        this.images = images;
+        this.status = 1;
+    }
+
+    public Collection() {
+    }
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;

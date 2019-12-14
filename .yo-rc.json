@@ -37,6 +37,8 @@
     "enableTranslation": true,
     "nativeLanguage": "vi",
     "languages": ["vi"],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "shop-gia-linh",
+    "herokuDeployType": "jar"
   }
 }

@@ -34,7 +34,7 @@ public class Product implements Serializable {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "images")
+    @Column(name = "images", columnDefinition = "TEXT")
     private String images;
 
     @Column(name = "is_sale")
@@ -71,6 +71,23 @@ public class Product implements Serializable {
     @ManyToOne
     @JsonIgnoreProperties("products")
     private Collection collection;
+
+
+    public Product(@NotNull String name, Double price, String description, String images, Boolean isSale, Integer percent, String detail, Category category, Collection collection) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.images = images;
+        this.isSale = isSale;
+        this.percent = percent;
+        this.detail = detail;
+        this.category = category;
+        this.collection = collection;
+        this.status = 1;
+    }
+
+    public Product() {
+    }
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
