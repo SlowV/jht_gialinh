@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "/")
 public class HomeController {
-    @Autowired
-    CategoryServiceCustom categoryService;
+    final CategoryServiceCustom categoryService;
+
+    public HomeController(CategoryServiceCustom categoryService) {
+        this.categoryService = categoryService;
+    }
 
     @GetMapping
     public String index(Model model) {
